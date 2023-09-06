@@ -47,6 +47,14 @@ img {
     color: #e08905;
 }
 
+button {
+    width: 5em;
+    background-color: #242629; 
+    border: none; 
+    color: aliceblue; 
+    font-size: 14px;
+}
+
 @media (max-width: 750px) {
     body {
         overflow-y: scroll;
