@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.child {
+    line-height: 0;
+}
+
+@media (max-width: 750px) {
+    .card-title {
+        font-size: 1.2em;
+    }
+
+    .card-text {
+        font-size: 0.9em;
+    }
+}
