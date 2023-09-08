@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+.line {
+    border: 2px solid #FF9B05; 
+    width: 20%; 
+    height: 0;
+    margin-top: 4%;
+}
+
+.tombol{
+    background-color: #FF9B05; 
+    width: 15%;
+}
+
+.lebar {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.follow {
+    width: 10%;
+    margin-top: 2%;
+}
+
+@media (max-width: 750px) {
+    .lebar {
+        width: 100%;
+    }
+
+    .line {
+        margin-top: 10%;
+        width: 30%;
+    }
+
+    .tombol {
+        width: 25%;
+    }
+
+    .follow {
+        margin-top: 5%;
+    }
+}
