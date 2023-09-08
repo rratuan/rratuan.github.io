@@ -1,11 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>about</h1>
-</body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <body style="background-color: #242629">
+    <!-- bagian about me -->
+    <div class="container mt-3">
+      <div
+        class="row d-flex justify-content-center align-items-center gap-3 p-4 text-light"
+        style="background-color: #16161a"
+      >
+        <div class="line-text">
+          <div class="col-lg-8 about fs-4">About Me</div>
+          <div class="line"></div>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img src="ratu.png" alt="ratu" />
+        </div>
+        <div class="col-lg-5 description" style="font-size: 0.8em">
+          <p>
+            Hello! My name is Ratu, and I am a freshman currently pursuing a
+            Bachelor of Computer Science in Informatics Engineering at
+            Indonesian Computer University. I believe that education is the key
+            to achieving your dreams, and I am committed to developing myself
+            academically and personally.
+          </p>
+          <p>
+            I am very interested in the field of web development.Through this
+            portofolio, I hope to share my developments, achievements, and ideas
+            throughout my journey as a student. I'm always open to new
+            opportunities, collaborations, and suggestions, so don't hesitate to
+            contact me via email or via social media that I have listed in the
+            contact section.
+          </p>
+          <p>
+            Thank you for visiting my portfolio, and I look forward to meeting
+            with you to share our experiences and goals together.
+          </p>
+          <p>Regards,Ratuayu Nurfajar</p>
+        </div>
+      </div>
+    </div>
+    <!-- bagian skills -->
+    <div class="container mt-3">
+      <div class="row d-flex gap-2 p-4 text-light">
+        <div class="line-text">
+          <div class="col-lg-8 skill fs-5">Skills</div>
+          <div class="line-skill"></div>
+        </div>
+        <div class="botton"></div>
+            <div class="col-1 skill-items">
+                <button id="techStackBtn">Tech Stack</button>
+            </div>
+            <div class="col-1 skill-items">
+                <button id="toolsBtn">Tools</button>
+            </div>
+        </div>
+      </div>
+      <div class="container text-center text-light stack-container" id="stack-container" style="display: block;">
+        <div class="container-skills row d-flex justify-content-center gap-2">
+          <div class="col-lg-2">
+            <i class="bi bi-filetype-html icon-large"></i>
+            <p>HTML</p>
+          </div>
+          <div class="col-lg-2">
+            <i class="bi bi-filetype-css icon-large"></i>
+            <p>CSS</p>
+          </div>
+          <div class="col-lg-2">
+            <i class="bi bi-filetype-js icon-large"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="col-lg-2">
+            <i class="bi bi-bootstrap-fill icon-large" style="color: purple;"></i>
+            <p>Bootstrap</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" text-light text-center p-5" id="tools-container"> isi dari tools</div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="about.js"></script>
+  </body>
 </html>

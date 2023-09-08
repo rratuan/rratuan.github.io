@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+img {
+    width: 50%; 
+    border-radius: 50%; 
+    border: 2.5px #9B9B9B solid;
+    object-fit: cover;
+}
+
+.line-text {
+    width: 100%;
+    height: 100%;
+    align-items: center; 
+    gap: 1%; 
+    display: inline-flex
+}
+
+
+.about {
+    width: 10%;
+}
+
+.line {
+    width: 15%;
+    border: 1.50px #FF9B05 solid
+}
+
+.line-skill {
+    width: 10%;
+    border: 1.50px #FF9B05 solid
+}
+
+.skill {
+    width: 5%;
+}
+
+.icon-large {
+    font-size: 2.5em;
+    color: #e08905;
+}
+
+button {
+    width: 5em;
+    background-color: #242629; 
+    border: none; 
+    color: aliceblue; 
+    font-size: 14px;
+}
+
+@media (max-width: 750px) {
+    body {
+        overflow-y: scroll;
+    }
+    .about {
+        width: 35%;
+        word-wrap: break-word;
+    }
+
+    .line {
+        width: 30%;
+        border: 0.5px #FF9B05 solid;
+    }
+
+    .line-text {
+        gap: 1.2%;
+    }
+
+    .description {
+        margin-top: 5%;
+    }
+
+    .text-center {
+        margin-top: 5%;
+    }
+
+    .skill-items {
+        width: 30%;
+    }
+
+    .skill {
+        width: 18%;
+    }
+
+    .line-skill {
+        width: 20%;
+    }
+}
