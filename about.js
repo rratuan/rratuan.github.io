@@ -1,24 +1,10 @@
-let techStack = document.getElementById('techStack');
+document.getElementById('techStackBtn').addEventListener('click', function() {
+    document.getElementById('stack-container').style.display = 'block';
+    document.getElementById('tools-container').style.display = 'none';
+});
 
-techStack.addEventListener('click', function(){
-    let container = document.getElementById('container');
-    
-    container.innerHTML = '';
-
-    let techStackItems = document.getElementById('techStackItems').innerHTML;
-
-    container.innerHTML = techStackItems;
-})
-
-let tools = document.getElementById('tools');
-
-tools.addEventListener('click', function() {
-    let container = document.getElementById('container');
-
-    container.innerHTML = '';
-
-    let toolsItems = ['Visual Studio Code', 'Git', 'Webpack', 'Babel'];
-    
-    container.innerHTML = toolsItems;
-
-})
+document.getElementById('toolsBtn').addEventListener('click', function() {
+    document.getElementById('stack-container').style.display = 'none';
+    document.getElementById('tools-container').style.display = 'block';
+});
+document.getElementById('tools-container').style.display = 'none';
