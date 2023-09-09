@@ -33,6 +33,11 @@ a {
     margin-top: 2%;
 }
 
+.alert {
+    width: 40%;
+    text-align: center;
+}
+
 @media (max-width: 750px) {
     .lebar {
         width: 100%;
@@ -50,4 +55,10 @@ a {
     .follow {
         margin-top: 5%;
     }
+    .alert {
+        width: 80%;
+        text-align: center;
+        font-size: 0.7em;
+    }
+
 }

@@ -1,5 +1,10 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxEXm87gZIeKCLZtkEAe7wLZHZYl_k8VsMySXzX2V1apwlm11W2daZpMhcWZch6Dvg/exec'
 const form = document.forms['ratu-contact-form']
+let alertSuccess = document.getElementById('alertSuccess');
+let alertFailed = document.getElementById('alertFailed')
+
+// alertSuccess.style.display = 'none'
+// alertFailed.style.display = 'none'
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -10,13 +15,14 @@ form.addEventListener('submit', e => {
             if (data.result === 'success') {
                 // Kosongkan semua kolom input pada formulir
                 form.reset();
-                alert('Thank you, your message has been sent!');
+                alertSuccess.style.display = 'block'
+                
             } else {
-                alert('Terjadi kesalahan saat mengirim data. Silakan coba lagi.');
+                alertFailed.style.display = 'block'
             }
         })
         .catch(error => {
-            console.error('Terjadi kesalahan:', error);
-            alert('Sorry, an error occurred while sending the message. Please try again.');
+            console.error('An error:', error);
+            alert('Sorry, an error while sending the message. Please try again.');
         });
 })
