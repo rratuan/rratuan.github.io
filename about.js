@@ -1,24 +1,17 @@
-let techStack = document.getElementById('techStack');
+let stackBtn = document.getElementById('techStackBtn');
+let toolsBtn = document.getElementById('toolsBtn');
+let stackContainer = document.getElementById('stack-container');
+let toolsContainer = document.getElementById('tools-container');
 
-techStack.addEventListener('click', function(){
-    let container = document.getElementById('container');
-    
-    container.innerHTML = '';
+toolsContainer.style.display = 'none'
 
-    let techStackItems = document.getElementById('techStackItems').innerHTML;
+stackBtn.addEventListener('click', function() {
+    stackContainer.style.display = 'block';
+    toolsContainer.style.display = 'none';
+});
 
-    container.innerHTML = techStackItems;
+toolsBtn.addEventListener('click', function() {
+    stackContainer.style.display = 'none';
+    toolsContainer.style.display = 'block';
 })
 
-let tools = document.getElementById('tools');
-
-tools.addEventListener('click', function() {
-    let container = document.getElementById('container');
-
-    container.innerHTML = '';
-
-    let toolsItems = ['Visual Studio Code', 'Git', 'Webpack', 'Babel'];
-    
-    container.innerHTML = toolsItems;
-
-})
