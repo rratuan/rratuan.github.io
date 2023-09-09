@@ -30,4 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         gantiSumberIframe('contact.html');
     });
+
+    // even listener untuk tautan home
+    let linkHome = document.getElementById('linkHome');
+
+    linkHome.addEventListener('click', function(e) {
+        e.preventDefault();
+        gantiSumberIframe('home.html');
+    });
+
 })
