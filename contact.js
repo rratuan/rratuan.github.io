@@ -1,28 +1,9 @@
-const scriptId = 'AKfycbzATnkARFdvMZxUq7YynylY7B4uC6pDmbQgbQYBITaZg6iPzzLSRzTu0SGKay-gn60ndA'
-const scriptUrl = 'https://script.google.com/macros/s/AKfycbzATnkARFdvMZxUq7YynylY7B4uC6pDmbQgbQYBITaZg6iPzzLSRzTu0SGKay-gn60ndA/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxEXm87gZIeKCLZtkEAe7wLZHZYl_k8VsMySXzX2V1apwlm11W2daZpMhcWZch6Dvg/exec'
+const form = document.forms['ratu-contact-form']
 
-$(document).ready(function () {
-    $('#form').on('submit', function (e) {
-        e.preventDefault();
-
-        var formData = {
-            name: $('#inputName').val(),
-            email: $('#inputEmail').val(),
-            phone: $('#inputNumber').val(),
-            comment: $('#inputComment').val()
-        };
-
-        $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbzATnkARFdvMZxUq7YynylY7B4uC6pDmbQgbQYBITaZg6iPzzLSRzTu0SGKay-gn60ndA/exec',
-            method: 'POST',
-            data: formData,
-            success: function () {
-                alert('Data berhasil disimpan ke database.');
-                $('#form')[0].reset();
-            },
-            error: function () {
-                alert('Terjadi kesalahan. Data tidak dapat disimpan.');
-            }
-        });
-    });
-});
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+})

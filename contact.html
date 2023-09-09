@@ -22,18 +22,19 @@
                 <div class="text fs-4 mt-3 fw-bold text-light"><p>Contact me</p></div>
                 <div class="line"></div>
             </div>
-            <form class="row g-3 mt-0 mb-4 lebar" id="form">
+            <form class="row g-3 mt-0 mb-4 lebar" name="ratu-contact-form">
                 <div class="col-md-3">
                   <label for="inputName" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="inputName" required />
+                  <input type="text" class="form-control" id="inputName" name="name" required />
                 </div>
                 <div class="col-md-6">
                   <label for="inputEmail" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" required/>
+                  <input type="email" class="form-control" id="inputEmail" name="email" required/>
                 </div>
                 <div class="col-12">
                   <label for="inputNumber" class="form-label">Phone Number</label>
                   <input
+                    name="phone"
                     type="number"
                     class="form-control"
                     id="inputNumber"
@@ -41,7 +42,7 @@
                   />
                 </div>
                 <div class="form-floating mt-4">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="inputComment" style="height: 100px;"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="inputComment" name="comment" style="height: 100px;"></textarea>
                     <label for="inputComment">Comments</label>
                 </div>
                 <div class="col-12">
