@@ -3,8 +3,8 @@ const form = document.forms['ratu-contact-form']
 let alertSuccess = document.getElementById('alertSuccess');
 let alertFailed = document.getElementById('alertFailed')
 
-// alertSuccess.style.display = 'none'
-// alertFailed.style.display = 'none'
+alertSuccess.style.display = 'none'
+alertFailed.style.display = 'none'
 
 form.addEventListener('submit', e => {
     e.preventDefault()
