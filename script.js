@@ -7,6 +7,21 @@ document.addEventListener('DOMContentLoaded', function() {
         myIframe.src = src; // Ganti URL ini sesuai dengan yang Anda inginkan
     }
 
+    // loop ganti warna navbar
+    let menuLinks = document.querySelectorAll('div a');
+
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            menuLinks.forEach(function(link) {
+                link.classList.remove('clickActive');
+            });
+
+            link.classList.add('clickActive')
+        })
+    })
+
     // Even listener untuk tautan about
     let linkAbout = document.getElementById('linkAbout');
 
@@ -38,5 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         gantiSumberIframe('home.html');
     });
+})
 
+// home active
+document.addEventListener('DOMContentLoaded', function() {
+    linkHome.classList.add('clickActive');
 })
