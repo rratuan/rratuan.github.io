@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <title>Menu Makanan</title>
+</head>
+<body onload="loadPage()">
+    <div class="container">
+        <!-- jumbotron -->
+        <div class="jumbotron"></div>
+        <!-- navbar -->
+        <div class="navbar-container">
+            <div class="navbar w3-orange">
+                <div class="w3-bar w3-orange">
+                    <button onclick="openMenu('home')" class="w3-bar-item w3-button w3-mobile">Home</button>
+                    <button onclick="openMenu('appetizer')" class="w3-bar-item w3-button w3-mobile">Appetizer</button>
+                    <button onclick="openMenu('maincourse')" class="w3-bar-item w3-button w3-mobile">Main Course</button>
+                    <button onclick="openMenu('dessert')" class="w3-bar-item w3-button w3-mobile">Dessert</button>
+                    <div class="w3-dropdown-hover w3-mobile">
+                        <button class="w3-button">Drink<i class="fa fa-caret-down"></i></button>
+                        <div class="w3-dropdown-content w3-bar-block w3-dark-grey">
+                        <button onclick="openMenu('milk')" class="w3-bar-item w3-button w3-mobile">Milk</button>
+                        <button onclick="openMenu('coffee')" class="w3-bar-item w3-button w3-mobile">Coffee</button>
+                        <button onclick="openMenu('juice')" class="w3-bar-item w3-button w3-mobile">Juice</button>
+                        </div>
+                    </div>
+                    <div class="search w3-right">
+                        <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
+                        <button href="#" class="w3-bar-item w3-button"><i class="material-icons">search</i></button>
+                        <button onclick="openMenu('me')" class="w3-bar-item w3-button w3-mobile"><i class="material-icons">person</i></button>
+                        <button class="w3-bar-item w3-button w3-mobile"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page utama -->
+        <div class="page_utama">
+            <!-- home -->
+            <div id="home" class="hidangan">
+                <marquee behavior="scroll" direction="left">
+                    <span id="marquee-text">Selamat Datang di Restaurant Food & Drinks</span>
+                </marquee>
+            </div>
+            <!-- appetizer -->
+            <div class="appetizer-container">
+                <div id="appetizer" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Avocado,Spinasch,and Arugula Salad -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Avocado,Spinasch,and Arugula Salad</h4>
+                                <img src="appetizer/Avocado,Spinasch,and Arugula Salad.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ballpark Fries -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Ballpark Fries</h4>
+                                <img src="appetizer/Ballpark Fries.webp" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buffalo'ed Baby Bakers -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Buffalo'ed Baby Bakers</h4>
+                                <img src="appetizer/Buffalo'ed Baby Bakers.webp" style="width:80%">
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Chicken Choppers -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Chicken Choppers</h4>
+                                <img src="appetizer/Chicken Choppers.webp" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grain,Chili and Corn Chip Burger -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Grain,Chili and Corn Chip Burger</h4>
+                                <img src="appetizer/Grain,Chili and Corn Chip Burger.webp" style="width:80%">
+                                <h5>Rp 200.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this) ">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Korean Fried Cauliflower with Edamame -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Korean Fried Cauliflower with Edamame</h4>
+                                <img src="appetizer/Korean Fried Cauliflower with Edamame.webp" style="width:80%">
+                                <h5>Rp 300.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Picadillo Potato Empanadas -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Picadillo Potato Empanadas</h4>
+                                <img src="appetizer/Picadillo Potato Empanadas.webp" style="width:80%">
+                                <h5>Rp 100.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Street Corn Nachos -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Street Corn Nachos</h4>
+                                <img src="appetizer/Street Corn Nachos.webp" style="width:80%">
+                                <h5>Rp 150.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sweet Potato and Bacon Alfredo Pizza -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Sweet Potato and Bacon Alfredo Pizza</h4>
+                                <img src="appetizer/Sweet Potato and Bacon Alfredo Pizza.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- main course -->
+            <div class="maincourse-container">
+                <div id="maincourse" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Avocado,Spinasch,and Arugula Salad -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Braised Chicken Legs</h4>
+                                <img src="main course/braised chicken legs.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ballpark Fries -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Caesar Salad Roast Chicken</h4>
+                                <img src="main course/caesar salad roast chicken.webp" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buffalo'ed Baby Bakers -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Cedar-Plank Salmon</h4>
+                                <img src="main course/cedar-plank salmon.webp" style="width:80%">
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Chicken Choppers -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Fish Tacos Al Pastor</h4>
+                                <img src="main course/fish tacos al pastor.webp" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grain,Chili and Corn Chip Burger -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Gado-Gado</h4>
+                                <img src="main course/gado gado.webp" style="width:80%">
+                                <h5>Rp 200.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this) ">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Korean Fried Cauliflower with Edamame -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Grilled Coconut Shrimp with Shishito</h4>
+                                <img src="main course/grilled coconut shrimp wih shishito.webp" style="width:80%">
+                                <h5>Rp 300.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Picadillo Potato Empanadas -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Instant Pot Lamb Haleem</h4>
+                                <img src="main course/instnt pot lamb haleem.webp" style="width:80%">
+                                <h5>Rp 100.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Street Corn Nachos -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Seared Scallops with Basil Risotto</h4>
+                                <img src="main course/seared scallops ith basil risotto.webp" style="width:80%">
+                                <h5>Rp 150.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sweet Potato and Bacon Alfredo Pizza -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Thai Muslim-Style Grilled Chicken</h4>
+                                <img src="main course/thai muslim-style grilled chicken.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- dessert -->
+            <div class="dessert-container">
+                <div id="dessert" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Banoffee Pie -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Banoffee Pie</h4>
+                                <img src="dessert/Banoffee Pie.jpg" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Chocolate and Boysenberry Cheeseca -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Chocolate and Boysenberry Cheesecake</h4>
+                                <img src="dessert/Chocolate and Boysenberry Cheesecake.jpg" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cofortably Numb -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Cofortably Numb</h4>
+                                <img src="dessert/Cofortably Numb.jpg" style="width:80%">
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Jack Daniel's Chocolate Fudge Pudding -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Jack Daniel's Chocolate Fudge Pudding</h4>
+                                <img src="dessert/Jack Daniel's Chocolate Fudge Pudding.jpg" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Kiwi Pavlovar -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Kiwi Pavlova</h4>
+                                <img src="dessert/Kiwi Pavlova.jpg" style="width:80%">
+                                <h5>Rp 200.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this) ">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Longhorn Cheesecake -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Longhorn Cheesecake</h4>
+                                <img src="dessert/Longhorn Cheesecake.jpg" style="width:80%">
+                                <h5>Rp 300.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- The Milkybar Puds -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>The Milkybar Pud</h4>
+                                <img src="dessert/The Milkybar Pud.jpg" style="width:80%">
+                                <h5>Rp 100.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- milk -->
+            <div class="milk-container">
+                <div id="milk" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Best Friend -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Best Friend</h4>
+                                <img src="milk/Best Friend.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Classic -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Classic</h4>
+                                <img src="milk/Classic.webp" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Passion Fruit GT -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Passion Fruit GT</h4>
+                                <img src="milk/Passion Fruit GT.webp" style="width:80%">
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Piglet -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Piglet</h4>
+                                <img src="milk/Piglet.webp" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Thai Tea -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Thai Tea</h4>
+                                <img src="milk/Thai Tea.webp" style="width:80%">
+                                <h5>Rp 200.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this) ">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- coffee -->
+            <div class="coffee-container">
+                <div id="coffee" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Hot Americano -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Hot Americano</h4>
+                                <img src="coffe/hot americano.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hot Cafe Latte -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Hot Cafe Latte</h4>
+                                <img src="coffe/Hot Cafe Latte.webp" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hot Cafe Mocha -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Hot Cafe Mocha</h4>
+                                <br>
+                                <img src="coffe/Hot Cafe Mocha.webp" style="width:80%">
+                                <br><br>
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hot Caramel Latte -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Hot Caramel Latte</h4>
+                                <img src="coffe/Hot Caramel Latte.webp" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Hot Coppuccino -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Hot Coppuccino</h4>
+                                <br>
+                                <img src="coffe/Hot Coppuccino.webp" style="width:80%">
+                                <br><br>
+                                <h5>Rp 200.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this) ">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ice Americano -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Ice Americano</h4>
+                                <img src="coffe/Ice Americano.webp" style="width:80%">
+                                <h5>Rp 300.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Ice Cafe Mocha -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Ice Cafe Mocha</h4>
+                                <img src="coffe/Ice Cafe Mocha.webp" style="width:80%">
+                                <h5>Rp 100.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Java Chip Frappe -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Java Chip Frappe</h4>
+                                <img src="coffe/Java Chip Frappe.webp" style="width:80%">
+                                <h5>Rp 150.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mocha Java Chip Frappe -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Mocha Java Chip Frappe</h4>
+                                <img src="coffe/Mocha Java Chip Frappe.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="juice-container">
+                <div id="juice" class="hidangan">
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <!-- Alpukat Juice -->
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Alpukat Juice</h4>
+                                <img src="Jus/Alpukat Juice.webp" style="width:80%">
+                                <h5>Rp 50.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buah Naga Juice -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Buah Naga Juice</h4>
+                                <img src="Jus/Buah Naga Juice.jpg" style="width:80%">
+                                <h5>Rp 60.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>        
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mangga Juice -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Mangga Juice</h4>
+                                <img src="Jus/Mangga Juice.webp" style="width:80%">
+                                <h5>Rp 120.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mentimun Semangka Juice -->
+                        <div class="grid-item">
+                            <div class="w3-card-4 card-item w3-center w3-round-xlarge">
+                                <h4>Mentimun Semangka Juice</h4>
+                                <img src="Jus/Mentimun Semangka Juice.webp" style="width:80%">
+                                <h5>Rp 80.000,00</h5>
+                                <div class="quantity-container">
+                                    <button class="w3-button w3-circle order" onclick="decreaseQuantity(this)">-</button>
+                                    <span class="quantity">1</span>
+                                    <button class="w3-button w3-circle order" onclick="increaseQuantity(this)">+</button>
+                                    <button class="w3-button w3-round-xxlarge order">Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- about me -->
+            <div class="about-container">
+                <div class="me">
+                    <div id="me" class="hidangan">
+                        <div class="grid-container footer">
+                            <div class="grid-item footer-item-me">
+                                <!-- About Me-->
+                                <div class="w3-card-4 card-item w3-center w3-round-xlarge card">
+                                    <img id="me" src="about me/WhatsApp Image 2024-01-27 at 09.18.25_818a61f7.jpg" style="width:80%">
+                                    <h2>Ratuayu Nurfajar</h2>
+                                    <h4>10123215</h4>
+                                    <h4>Teknik Informatika 6</h4>
+                                </div>
+                            </div>
+                            <!-- Description -->
+                            <div class="grid-item footer-item-about">
+                                <div class="w3-card-4 card-item w3-center w3-round-xlarge card">
+                                    <header class="w3-container">
+                                        <h1 class="header">About Me</h1>
+                                    </header>
+                                    <div class="w3-container">
+                                        <p>I'm a student at the Indonesian Computer University, majoring in information engineering. I created this website as a final assignment for my first semester web programming subject.</p>
+                                        <p>This website is a restaurant website that displays the menus for sale. I hope this website can be a means for me to show my abilities in the field of web programming.</p>
+                                        <p>I also hope that this website can be an inspiration for my friends who are also interested in the field of web programming.</p>
+                                    </div>
+                                    <footer class="w3-container">
+                                        <div class="social-buttons">
+                                            <a href="https://www.linkedin.com/in/ratuayunurfajar/" target="_blank" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                            <a href="https://github.com/rratuan" target="_blank" class="social-button social-button--github" aria-label="GitHub">
+                                                <i class="fab fa-github"></i>
+                                            </a>
+                                            <a href="https://rratuan.github.io" target="_blank" class="social-button social-button--codepen" aria-label="CodePen">
+                                                <i class="fab fa-codepen"></i>
+                                            </a>
+                                            <a href="https://www.instagram.com/mcrsoft_/" target="_blank" class="social-button social-button--instagram" aria-label="CodePen">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/8f12fa7235.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
